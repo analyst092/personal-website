@@ -528,6 +528,46 @@
             margin-bottom: 1rem;
         }
 
+        .footer-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .stat-icon {
+            font-size: 1rem;
+        }
+
+        .stat-number {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .stat-divider {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .footer-stats {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .stat-divider {
+                display: none;
+            }
+        }
+
         /* 响应式 */
         @media (max-width: 768px) {
             .hero h1 {
@@ -1039,8 +1079,25 @@
 
     <footer>
         <div class="footer-tagline">期待与您合作，用数据创造价值</div>
+        <div class="footer-stats">
+            <span class="stat-item">
+                <span class="stat-icon">👁️</span>
+                <span>总浏览量 </span>
+                <span id="busuanzi_value_site_pv" class="stat-number">--</span>
+                <span> 次</span>
+            </span>
+            <span class="stat-divider">|</span>
+            <span class="stat-item">
+                <span class="stat-icon">👤</span>
+                <span>访客数 </span>
+                <span id="busuanzi_value_site_uv" class="stat-number">--</span>
+                <span> 人</span>
+            </span>
+        </div>
         <p>© 2024 田承奇 | 数据分析师</p>
     </footer>
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     <script>
         // 用户状态管理（与登录页同步）
